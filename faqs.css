@@ -1,0 +1,62 @@
+body{
+    background: url("https://media.istockphoto.com/id/1371008390/photo/green-question-mark-on-a-background-of-white-signs-concept-of-asking-seeking-for-knowledge.jpg?s=612x612&w=0&k=20&c=FyakgsUJg_1Gqd7yErkUkqy1FdZvr8z-AtO-keaMh9s=");
+    height:100vh;
+    background-repeat:no-repeat;
+    background-size:cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.accordian{
+    width:70%;
+    background-color:white;
+    padding:20px;
+    border-radius:16px;
+    opacity:1;
+    border: 1px solid black;
+}
+
+.accordian-title{
+    text-align:center;
+    margin-bottom:30px;
+    margin-top:0px;
+}
+
+.question{
+    color:grey;
+    padding:15px;
+    font-size:18px;
+    border-bottom: 1px solid darkgray;
+    position:relative;
+}
+
+.question::after{
+    position:absolute;
+    content:'+';
+    font-size:22px;
+    right: 20px;
+}
+
+.answer{
+    padding:15px;
+    color:grey;
+    font-size:18px;
+    line-height:1.5;
+    width:100%;
+    overflow:hidden;
+    transition: all 0.5s ease 1ms;
+    display:none;
+}
+
+.content-container.active .answer{
+display:block;
+height:100px;
+transition: all 0.5s ease 1ms;
+}
+
+.content-container.active .question::after{
+content:'-';
+font-size:22px;
+transition:0.5s;
+}
